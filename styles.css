@@ -1,0 +1,814 @@
+:root {
+    --White: #FFFFFF; 
+    --Slightly-gray: #F5F5F5;
+    --Night: #141715; 
+    --Gold: #d4d444; 
+    --Columbia-Blue: #D0E0E6; 
+    --Dark-Cyan: #094A4E; 
+    --Dark-Green: #10342B; 
+    --Additional-dark-purple: #20092E; 
+}
+
+body {
+    font-family: Lexend, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-family: Oxanium, Lexend, sans-serif;
+    color: var(--Night, #141715);
+    font-family: Oxanium;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+h2 {
+    font-family: Oxanium, Lexend, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+h3 {
+    font-family: Oxanium, Lexend, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+h4 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+p {
+    color: var(--Night, #141715);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    /* margin: 0; */
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+input, button {
+    font-family: Lexend, sans-serif;
+}
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scroll thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scroll thumb on hover */
+}
+
+/* Header */
+
+header {
+    background-color: var(--White);
+    /* height: 100vh; */
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    width: 90%;
+    height: 90px;
+    top: 0;
+    padding: 5px 5%;
+    justify-content: center;
+    align-items: center;
+    background: var(--Gold, #6FF0F2);
+    position: fixed;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    width: 100%; 
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 495px; */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+}
+
+.nav-left a {
+    color: var(--Night, #141715);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    /* width: 108px; */
+    /* height: 41px; */
+    /* padding: 10px 16px; */
+    justify-content: center;
+    align-items: center;
+    /* background: var(--Additional-dark-purple, #20092E); */
+}
+
+.nav-right a {
+    padding: 10px 20px;
+    background: var(--Additional-dark-purple, #20092E);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.nav-filler {
+    height: 95px;
+}
+
+/* Mobile menu */
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.burger div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--Night, #141715);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--Gold, #6FF0F2);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--Night, #141715);
+    display: block;
+    transition: 0.3s;
+}
+
+/* Presets */
+
+.margin-preset {
+    margin: 5%;
+}
+
+.padding-preset {
+    padding: 5%;
+}
+
+/* Hero section */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    /* gap: 10%; */
+    /* margin: 5%; */
+}
+
+.tagline {
+    margin: 0 10%;
+}
+
+.hero-section h1 {
+    margin: 0;
+}
+
+.showcase-pict {
+    /* min-width: 400px;
+    min-height: 300px; */
+    width: 70%;
+    height: 446px;
+    background-image: url(Assets/Bugatti\ Chiron\ 2023.jpeg);
+    background-size: 85vw;
+    background-position: 55%;
+    background-repeat: no-repeat;
+}
+
+.showcase-pict.showroom {
+    background-size: cover;
+    background-position: center;
+    background-image: url(Assets/car-showcase.jpg);
+}
+
+/* .showcase-pict img {
+    background: url(Assets/Bugatti\ Chiron\ 2023.jpeg) lightgray 50% / cover no-repeat;
+} */
+
+/* Carousel section */
+
+.carousel {
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+  
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images.brand {
+    width: 100%;
+}
+
+.carousel-image {
+    min-width: 100%;
+    object-fit: contain;
+    transition: opacity 0.5s ease;
+    transition: transform 0.4s;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.carousel-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+    /* gap: 10%; */
+    /* margin: 0 auto; */
+    /* width: calc(5 * 160px + 4 * 10%) */
+}
+
+.carousel-brand img {
+    width: 15vw;
+    height: auto;
+    max-width: 160px;
+    max-height: 200px;
+    transition: transform .4s;
+}
+
+.carousel-brand img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+    background-image: url(Assets/arrow-left.svg);
+}
+
+.next {
+    right: 10px;
+    background-image: url(Assets/arrow-right.svg);
+}
+
+.prev.dark {
+    background-image: url(Assets/arrow-left-dark.svg);
+}
+
+.next.dark {
+    background-image: url(Assets/arrow-right-dark.svg);
+}
+
+/* Top Cars */
+
+.grid-container {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 51px 134px;
+    flex-wrap: wrap;
+}
+
+.car-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.car-image {
+    width: 355px;
+    height: 256px;
+    background-image: url(Assets/Car\ Models/toyota-alphard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform .4s;
+}
+
+.car-image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.brand {
+    color: var(--Dark-Green, #10342B);
+}
+
+.price {
+    color: var(--Dark-Cyan, #094A4E);
+}
+
+.location-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.location-container h3 {
+    color: var(--Night, #141715);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Car types */
+
+.alphard {
+    background-image: url(Assets/Car\ Models/toyota-alphard.png);
+}
+
+.roma-spider {
+    background-image: url(Assets/Car\ Models/2023-ferrari-roma-spider.avif);
+}
+
+.x7 {
+    background-image: url(Assets/Car\ Models/bmw-x7.png);
+}
+
+.sf90-stradale {
+    background-image: url(Assets/Car\ Models/2023-sf90-stradale.avif);   
+}
+
+.cilindri-spider {
+    background-image: url(Assets/Car\ Models/ferrari-12cilindri-spider.avif);   
+}
+
+.m4-coupe {
+    background-image: url(Assets/Car\ Models/bmw-m4-coupe.webp);   
+}
+
+.vellfire {
+    background-image: url(Assets/Car\ Models/toyota-vellfire.png);   
+}
+
+.wrangler {
+    background-image: url(Assets/Car\ Models/jeep-wrangler.jpg);   
+}
+
+/* Showroom locations */
+
+.jakarta {
+    background-image: url(Assets/Showroom\ Locations/showroom-jkt.jpg);   
+    background-size: 105%;
+}
+
+.bekasi {
+    background-image: url(Assets/Showroom\ Locations/showroom-bks.jpg);   
+    background-size: 110%;
+}
+
+.bandung {
+    background-image: url(Assets/Showroom\ Locations/showroom-bdg.jpg);   
+    background-size: 100%;
+}
+
+.semarang {
+    background-image: url(Assets/Showroom\ Locations/showroom-smg.jpg);   
+    background-size: 105%;
+}
+
+/* About Us */
+
+.about-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-vision, .about-mission, 
+.about-history, .about-socials {
+    max-width: 40%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.social-left, .social-right {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--Night, #141715);
+}
+
+/* Login */
+
+/* .login-body {
+    height: 100vh;
+} */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.create-account-box {
+    border-radius: 4px;
+    background: var(--Slightly-gray, #F5F5F5);
+    display: flex;
+    width: 574px;
+    /* height: 649px; */
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 18px;
+    margin: 40px 0;
+}
+
+.create-account-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.create-account-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input label {
+    color: var(--Night);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.login-input input {
+    padding: 8px 4px;
+    width: 340px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 0;
+    border-radius: 4px;
+    /* border-color: var(--Slightly-gray); */
+}
+
+.sign-up {
+    background-color: var(--Dark-Cyan);
+    color: var(--White);
+    padding: 8px 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 0;
+    border-radius: 4px;
+}
+
+.sign-up:hover {
+    cursor: pointer;
+    background-color: var(--Dark-Green);
+}
+
+.footer-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-login a {
+    text-decoration: none;
+    color: var(--Additional-dark-purple);
+}
+
+/* Footer */
+
+form.subscribe-email {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.footer-bg {
+    background: var(--Slightly-gray, #F5F5F5);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* margin: 10% inherit; */
+}
+
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+    /* flex-wrap: wrap; */
+}
+
+.footer-left {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+h4.newsletter {
+    color: var(--Night, #141715);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+input#subscribe {
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    background: var(--Columbia-Blue, #D0E0E6);
+}
+
+.submit-btn {
+    background: var(--Dark-Cyan, #094A4E);
+    width: 15%;
+    height: 40px;
+    padding: 13px;
+    border: none;
+    color: var(--White, #FFF);
+    
+}
+
+@media screen and (min-width: 1080px) {
+    .carousel-image {
+        max-height: 800px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .showcase-pict {
+        width: 100%;
+    }
+
+    .tagline {
+        margin: 0 28px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .nav-left {
+        gap: 6%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+    
+    /* Mobile nav */
+    
+    .nav-right, .nav-left a {
+        display: none;
+    }
+
+    a.nav-logo {
+        display: inline
+    }
+
+    .burger {
+        display: flex;
+    }
+    
+    .toggle.burger div {
+        transform: rotate(45deg);
+    }
+    
+    .toggle.burger div:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .toggle.burger div:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    /* Hero section */
+    .tagline {
+        margin: 0 2px;
+    }
+
+    .showcase-pict {
+        width: 100%;
+    }
+
+    .showcase-pict.showroom {
+        background-size: cover;
+        background-position: 38%;
+    }
+
+    /* About section */
+
+    .about-content {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-vision, .about-mission, .about-history, .about-socials {
+        max-width: 100%;
+    }
+    
+    /* Footer */
+
+    .submit-btn {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .tagline {
+        max-width: 50%;
+    }
+    
+    .footer-top {
+        gap: 5%;
+    }
+    
+    .footer-left img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4.newsletter {
+        font-size: 16px;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        gap: 30px;
+        /* justify-content: space-between; */
+    }
+
+    .showcase-pict {
+        height: 300px;
+        background-size: 170%;
+    }
+
+    .tagline {
+        max-width: 80%;
+    }
+
+    .tagline img {
+        width: 80%;
+    }
+
+    .grid-container {
+        gap: 0 134px;
+    }
+
+    input#subscribe {
+        width: 60%;
+    }
+
+    .submit-btn {
+        padding: 0 2%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .car-image {
+        width: 240px;
+    }
+}
