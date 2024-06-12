@@ -552,7 +552,7 @@ nav {
 }
 
 .login-input input {
-    padding: 8px 4px;
+    padding: 8px 10px;
     width: 340px;
     font-size: 18px;
     font-style: normal;
@@ -561,6 +561,11 @@ nav {
     border: 0;
     border-radius: 4px;
     /* border-color: var(--Slightly-gray); */
+}
+
+.form-tos {
+    display: flex;
+    align-items: center;
 }
 
 .sign-up {
